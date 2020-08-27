@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "express": "*",
+    "pg": "8.3.2",
+    "cors": "2.8.5",
+    "nodemon": "2.0.4"
+  },
+  "scripts": {
+    "dev": "nodemon",
+    "start": "node index.js"
+  }
+}
