@@ -10,12 +10,10 @@ script:
   - docker run sohel2109/client-test npm test -- --coverage
 
 after_success:
-  - docker build -t sohel2109/client ./client
   - docker build -t sohel2109/api ./server
   - docker build -t sohel2109/nginx ./nginx
   # Login to docker CLI
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Push images to docker hub
-  - docker push sohel2109/client
   - docker push sohel2109/api
   - docker push sohel2109/nginx
