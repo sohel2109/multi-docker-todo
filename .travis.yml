@@ -25,7 +25,7 @@ deploy:
   provider: elasticbeanstalk
   region: ap-northeast-1
   app: multi-docker-todo
-  env: MultiDockerTodo-env-1
+  env: MultiDockerTodo-env
   bucket_name: elasticbeanstalk-ap-northeast-1-560168190547
   bucket_path: multi-docker-todo
   on:
