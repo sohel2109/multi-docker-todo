@@ -19,3 +19,17 @@ after_success:
   - docker push sohel2109/client
   - docker push sohel2109/api
   - docker push sohel2109/nginx
+
+deploy:
+  edge: true
+  provider: elasticbeanstalk
+  region: ap-northeast-1
+  app: multi-docker-todo
+  env: MultiDockerTodo-env-1
+  bucket_name: elasticbeanstalk-ap-northeast-1-560168190547
+  bucket_path: multi-docker-todo
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
