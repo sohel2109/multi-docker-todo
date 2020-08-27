@@ -17,5 +17,5 @@ after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   # Push images to docker hub
   - docker push sohel2109/client
-  - docker push sohel2109/server
+  - docker push sohel2109/api
   - docker push sohel2109/nginx
